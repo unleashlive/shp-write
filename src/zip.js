@@ -4,8 +4,13 @@ var prj = require('./prj');
 var JSZip = require('jszip');
 
 module.exports = function(gj, options) {
-  var zip = new JSZip();
-  var layers = zip.folder(options && options.folder ? options.folder : 'layers');
+  var zip = new JSZip(),layers;
+  // if options.folder is set to false, zip files without a folder
+  if (options && options.folder === false) {
+    layers = zip;
+  } else {
+    layers = zip.folder(options && options.folder ? options.folder : 'layers');
+  }
 
   [geojson.point(gj), geojson.line(gj), geojson.polygon(gj)]
     .forEach(function(l) {

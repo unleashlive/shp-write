@@ -25,7 +25,7 @@ This should start an immediate download of test features defined in `indexTest.j
 
 * Requires a capable fancy modern browser with [Typed Arrays](http://caniuse.com/#feat=typedarrays)
   support
-* Geometries: Point, LineString, Polygon, MultiLineString, MultiPolygon
+* Geometries: Point, PointZ, MultiPoint, MultiPointZ, LineString, LineStringZ, Polygon, PolygonZ, MultiLineString, MultiPolygon
 * Tabular-style properties export with Shapefile's field name length limit
 
 ## Example

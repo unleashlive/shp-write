@@ -2,6 +2,7 @@ var zip = require('./zip');
 var saveAs = require('file-saver').saveAs;
 
 module.exports = function(gj, options) {
+  console.info('options', options);
   zip(gj, options).then(function(blob) {
     try {
       var isFileSaverSupported = !!new Blob;
